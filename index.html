@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dati Carta d'Identità</title>
+</head>
+<body>
+    <h1>Dati Carta d'Identità</h1>
+    <p>Nome: <span id="nome"></span></p>
+    <p>Cognome: <span id="cognome"></span></p>
+    <p>Data di Nascita: <span id="dataNascita"></span></p>
+    <p>Indirizzo: <span id="indirizzo"></span></p>
+    <p>Città: <span id="citta"></span></p>
+    <p>Provincia: <span id="provincia"></span></p>
+    <p>CAP: <span id="cap"></span></p>
+
+    <script>
+        // Carica i dati dal file JSON
+        fetch('CI.json')
+            .then(response => response.json())
+            .then(data => {
+                // Visualizza i dati nella pagina
+                document.getElementById('nome').textContent = data.Nome;
+                document.getElementById('cognome').textContent = data.Cognome;
+                document.getElementById('dataNascita').textContent = data.DataNascita;
+                document.getElementById('indirizzo').textContent = data.Indirizzo;
+                document.getElementById('citta').textContent = data.Citta;
+                document.getElementById('provincia').textContent = data.Provincia;
+                document.getElementById('cap').textContent = data.CAP;
+            })
+            .catch(error => {
+                console.error('Errore nel caricamento dei dati JSON: ' + error);
+            });
+    </script>
+</body>
+</html>
