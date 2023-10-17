@@ -2,16 +2,34 @@
 <html>
 <head>
     <title>Dati Carta d'Identità</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <h1>Dati Carta d'Identità</h1>
-    <p>Nome: <span id="nome"></span></p>
-    <p>Cognome: <span id="cognome"></span></p>
-    <p>Data di Nascita: <span id="dataNascita"></span></p>
-    <p>Indirizzo: <span id="indirizzo"></span></p>
+    <div class="card">
+        <div class="field">
+            <p>Nome:<span id="nome"></span></p>
+        </div>
+        <div class="field">
+            <p>Cognome: <span id="cognome"></span></p>
+        </div>
+       <div class="field">
+            <p>Data di Nascita: <span id="dataNascita"></span></p>
+        </div>
+        <div class="field">
+            <p>Indirizzo: <span id="indirizzo"></span></p>
+        </div>
+    <div class="field">
     <p>Città: <span id="citta"></span></p>
+    </div>
+    <div class="field">
     <p>Provincia: <span id="provincia"></span></p>
+    </div>
+    <div class="field">
     <p>CAP: <span id="cap"></span></p>
+    </div>
+    </div>
 
     <script>
         // Carica i dati dal file JSON
